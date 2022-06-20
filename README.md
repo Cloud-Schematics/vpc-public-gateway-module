@@ -17,7 +17,7 @@ This module is used to create Public Gateways in 1, 2, or 3 zones of a single VP
 Name              | Type   | Description                                                 | Sensitive | Default
 ----------------- | ------ | ----------------------------------------------------------- | --------- | -------
 prefix            | string | The prefix that you would like to append to your resources  |           | 
-vpc_id            | string | ID of the VPC where address prefixes will be created        |           | 
+vpc_id            | string | ID of the VPC where public gateways will be created        |           | 
 region            | string | The region to which to deploy the VPC                       |           | 
 resource_group_id | string | ID of the resource group where gateways will be provisioned |           | null
 public_gateways   | object | See below | | See below

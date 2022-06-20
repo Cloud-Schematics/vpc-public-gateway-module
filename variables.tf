@@ -8,7 +8,7 @@ variable "prefix" {
 }
 
 variable "vpc_id" {
-  description = "ID of the VPC where address prefixes will be created"
+  description = "ID of the VPC where public gateways will be created"
   type        = string
 }
 
