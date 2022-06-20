@@ -4,6 +4,14 @@ This module is used to create Public Gateways in 1, 2, or 3 zones of a single VP
 
 ---
 
+## Table of Contents 
+
+1. [Module Variables](#module-variables)
+2. [Public Gateways Variable](#public-gateways-variable)
+3. [Example Usage](#example-usage)
+
+---
+
 ## Module Variables
 
 Name              | Type   | Description                                                 | Sensitive | Default
@@ -32,4 +40,25 @@ variable "public_gateways" {
     zone-3 = true
   }
 }
+```
+
+## Example Usage
+
+```terraform
+
+##############################################################################
+# Public Gateways
+##############################################################################
+
+module "public_gateways" {
+  source            = "https://github.com/Cloud-Schematics/vpc-public-gateway-module.git"
+  prefix            = var.prefix
+  vpc_id            = ibm_is_vpc.vpc.id
+  region            = var.region
+  resource_group_id = data.ibm_resource_group.resource_group.id
+  public_gateways   = var.use_public_gateways
+}
+
+##############################################################################
+
 ```
