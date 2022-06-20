@@ -51,7 +51,7 @@ variable "public_gateways" {
 ##############################################################################
 
 module "public_gateways" {
-  source            = "https://github.com/Cloud-Schematics/vpc-public-gateway-module.git"
+  source            = "github.com/Cloud-Schematics/vpc-public-gateway-module"
   prefix            = var.prefix
   vpc_id            = ibm_is_vpc.vpc.id
   region            = var.region
